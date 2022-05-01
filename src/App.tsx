@@ -1,11 +1,12 @@
-import { ClickCounter } from './ClickCounter';
-import './hello.scss';
+import './styles/scss/base.scss';
+import UserListPage from './pages/UserList/UserListPage';
+import Dashboard from './components/Dashboard/Dashboard';
 
 export const App = () => {
   return (
-    <>
-      <h1 className="container">Test Message to check webpack works</h1>
-      <ClickCounter />
-    </>
+    <div className="container">
+      <Dashboard />
+      <UserListPage />
+    </div>
   );
 };

@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.container {
+  margin: 100px auto 0 auto;
+  max-width: 665px;
+  display: flex;
+}
+
+.defaultTextFont {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.defaultButton {
+  background-color: #4b51ef;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border-width: 0;
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background-color: #3d37ab;
+  }
+  &:active {
+    background-color: #242772;
+  }
+}
