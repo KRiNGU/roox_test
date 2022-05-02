@@ -1,29 +1,14 @@
 import styles from './Dashboard.module.scss';
 import { joinClassNames } from '../../utils/joinClassNames';
+import Button from '../Button/Button';
 
 const Dashboard = () => (
   <div className={styles.dashboard}>
     <p className={joinClassNames(['defaultTextFont', styles.dashboardTitle])}>
       Сортировка
     </p>
-    <button
-      className={joinClassNames([
-        'defaultTextFont',
-        styles.button,
-        'defaultButton',
-      ])}
-    >
-      по городу
-    </button>
-    <button
-      className={joinClassNames([
-        'defaultTextFont',
-        styles.button,
-        'defaultButton',
-      ])}
-    >
-      по компании
-    </button>
+    <Button className={styles.button} text="по городу" />
+    <Button className={styles.button} text="по компании" />
   </div>
 );
 

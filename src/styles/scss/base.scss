@@ -11,28 +11,20 @@ h1 {
   font-weight: bold;
 }
 
+.main {
+  width: max(420px, 63%);
+  margin-left: 31px;
+  position: relative;
+}
+
 .container {
-  margin: 100px auto 0 auto;
+  margin: 0 auto;
   max-width: 665px;
   display: flex;
+  min-height: 100vh;
 }
 
 .defaultTextFont {
   font-size: 12px;
   line-height: 14px;
-}
-
-.defaultButton {
-  background-color: #4b51ef;
-  padding: 5px 15px;
-  border-radius: 5px;
-  border-width: 0;
-  cursor: pointer;
-  color: white;
-  &:hover {
-    background-color: #3d37ab;
-  }
-  &:active {
-    background-color: #242772;
-  }
 }

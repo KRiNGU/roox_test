@@ -1,4 +1,5 @@
 import { joinClassNames } from '../../utils/joinClassNames';
+import Title from '../Title/Title';
 import User from '../User/User';
 import styles from './UserList.module.scss';
 
@@ -44,8 +45,8 @@ const UserList = () => {
   ];
 
   return (
-    <div className={styles.userListContainer}>
-      <h1 className={styles.title}>Список пользователей</h1>
+    <main className="main">
+      <Title text="Список пользователей" />
       <section className={styles.users}>
         {list.map((item: iList) => (
           <User
@@ -59,7 +60,7 @@ const UserList = () => {
       <p className={joinClassNames([styles.numberOfUsers, 'defaultTextFont'])}>
         Найдено {list.length} пользователей
       </p>
-    </div>
+    </main>
   );
 };
 
