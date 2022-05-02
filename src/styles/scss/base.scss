@@ -11,6 +11,10 @@ h1 {
   font-weight: bold;
 }
 
+body {
+  background-color: #e5e5e5;
+}
+
 .main {
   width: max(420px, 63%);
   margin-left: 31px;
@@ -22,6 +26,7 @@ h1 {
   max-width: 665px;
   display: flex;
   min-height: 100vh;
+  background-color: #fff;
 }
 
 .defaultTextFont {
