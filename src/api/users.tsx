@@ -8,6 +8,10 @@ const mainAxios = axios.create({
   },
 });
 
+export const getUserById = (id: number) => {
+  return mainAxios.get<IUserInformation>(`/users/${id}`);
+};
+
 export const getAllUsers = () => {
   return mainAxios.get<IUserInformation[]>('/users');
 };

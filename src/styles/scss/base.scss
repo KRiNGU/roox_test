@@ -15,18 +15,19 @@ body {
   background-color: #e5e5e5;
 }
 
-.main {
-  width: max(420px, 63%);
-  margin-left: 31px;
-  position: relative;
-}
-
 .container {
   margin: 0 auto;
   max-width: 665px;
   display: flex;
   min-height: 100vh;
   background-color: #fff;
+}
+
+.main {
+  width: max(420px, 63%);
+  margin-left: 31px;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .defaultTextFont {

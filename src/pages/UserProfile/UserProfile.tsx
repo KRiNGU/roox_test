@@ -6,16 +6,13 @@ import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import React, { useEffect, useState } from 'react';
 import { IUserInformation, IUserProfileInformation } from '../../models/models';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useParams } from 'react-router-dom';
 
-interface UserProfileProps {
-  id: number;
-}
-
-const UserProfile = ({ id }: UserProfileProps) => {
+const UserProfile: React.FC = (): JSX.Element => {
+  const params = useParams();
   const user: IUserInformation | undefined = useAppSelector((state) =>
-    state.user.users.find((user) => user.id === id)
+    state.user.users.find((user) => user.id === parseInt(params.id as string))
   );
-
   const {
     register,
     getValues,
@@ -27,8 +24,13 @@ const UserProfile = ({ id }: UserProfileProps) => {
   const [isEditMode, setIsEditMode] = useState(false);
   const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch({ type: 'LOAD_USERS' });
-  }, [dispatch]);
+    if (!user) {
+      dispatch({
+        type: 'LOAD_USER_BY_ID',
+        payload: { id: parseInt(params.id as string) },
+      });
+    }
+  }, [user, dispatch, params]);
 
   useEffect(() => {
     setValue('name', user?.name ?? '', { shouldValidate: true });
