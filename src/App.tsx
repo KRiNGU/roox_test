@@ -7,7 +7,7 @@ export const App = () => {
   return (
     <div className="container">
       <Dashboard />
-      <UserProfile />
+      <UserProfile id={1} />
     </div>
   );
 };

@@ -5,6 +5,16 @@
   border-width: 0;
   cursor: pointer;
   color: white;
+  &:disabled {
+    background: grey;
+    cursor: default;
+  }
+  &:disabled:hover {
+    background: grey;
+  }
+  &:disabled:active {
+    background: grey;
+  }
   &:hover {
     background-color: #3d37ab;
   }

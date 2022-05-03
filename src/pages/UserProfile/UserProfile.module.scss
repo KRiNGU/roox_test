@@ -17,15 +17,28 @@
 
 .buttonSaveForm {
   height: 27px;
-  padding-top: 6px;
   background-color: #52cf4f;
   float: right;
   margin-top: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border-width: 0;
+  cursor: pointer;
   &:hover {
     background-color: #368d35;
   }
   &:active {
     background-color: #1f511e;
+  }
+  &:disabled {
+    background: grey;
+    cursor: default;
+  }
+  &:disabled:hover {
+    background: grey;
+  }
+  &:disabled:active {
+    background: grey;
   }
 }
 
@@ -53,6 +66,8 @@
 }
 
 .commentInput {
+  padding-top: 5px;
+  padding-bottom: 5px;
   text-align: left;
   vertical-align: top;
   min-height: 55px;
