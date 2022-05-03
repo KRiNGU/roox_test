@@ -1,14 +1,10 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import { getAllUsers } from '../../api/users';
+import { IUserInformation } from '../../models/models';
 import * as reducers from './slice';
 
 export interface ResponseGeneratorI {
-  config?: any;
-  data?: any;
-  headers?: any;
-  request?: any;
-  status?: number;
-  statusText?: string;
+  data: IUserInformation[];
 }
 
 export function* workLoadAllUsers() {
