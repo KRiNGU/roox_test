@@ -18,10 +18,6 @@ interface LoadUser {
   data: IUserInformation;
 }
 
-interface LoadUsers {
-  data: IUserInformation[];
-}
-
 export function* workLoadUserById({ payload }: TLoadUserById) {
   try {
     const response: LoadUser = yield call(getUserById, payload.id);
