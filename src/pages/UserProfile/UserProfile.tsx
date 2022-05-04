@@ -56,7 +56,7 @@ const UserProfile: React.FC = (): JSX.Element => {
   }
 
   return (
-    <main className="main">
+    <>
       <Title text="Профиль пользователя" />
       <Button
         className={styles.buttonToggleMode}
@@ -187,7 +187,7 @@ const UserProfile: React.FC = (): JSX.Element => {
         className={styles.buttonSaveForm}
         disabled={!isEditMode}
       />
-    </main>
+    </>
   );
 };
 

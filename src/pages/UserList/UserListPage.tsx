@@ -39,25 +39,35 @@ const UserListPage = ({ filter }: IUserListPage) => {
       );
       break;
   }
-
   return (
-    <main className="main">
+    <>
       <Title text="Список пользователей" />
-      <section className={styles.users}>
-        {sortedUsers.map((item: IUserInformation) => (
-          <User
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            city={item.address.city}
-            company={item.company.name}
-          />
-        ))}
-      </section>
-      <p className={joinClassNames([styles.numberOfUsers, 'defaultTextFont'])}>
-        Найдено {users.length} пользователей
-      </p>
-    </main>
+      {sortedUsers.length === 0 ? (
+        <div className={styles.spinner}></div>
+      ) : (
+        <>
+          <section className={styles.users}>
+            {sortedUsers.map((item: IUserInformation) => (
+              <User
+                key={item.id}
+                id={item.id}
+                name={item.name}
+                city={item.address.city}
+                company={item.company.name}
+              />
+            ))}
+          </section>
+          <p
+            className={joinClassNames([
+              styles.numberOfUsers,
+              'defaultTextFont',
+            ])}
+          >
+            Найдено {users.length} пользователей
+          </p>
+        </>
+      )}
+    </>
   );
 };
 
